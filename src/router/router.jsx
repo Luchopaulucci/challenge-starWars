@@ -1,7 +1,9 @@
 import { createBrowserRouter } from "react-router-dom"
 import Main from "../layouts/Main";
-import Index from "../pages/Index"
-import Footer from "../components/Footer";
+import Index from "../pages/index"
+import Characters from "../pages/Characters"
+import Films from "../pages/Films"
+import Starships from "../pages/Starships"
 
 const router = createBrowserRouter([
   {
@@ -13,8 +15,16 @@ const router = createBrowserRouter([
         element: <Index />
       },
       {
-        path: '/footer',
-        element: <Footer />
+        path: '/characters',
+        element: <Characters />
+      },
+      {
+        path: '/films',
+        element: <Films />
+      },
+      {
+        path: '/starships',
+        element: <Starships />
       },
     ]
   },

@@ -2,11 +2,11 @@ import { Outlet } from "react-router-dom"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
-const Main = ({ children }) => {
+const Main = () => {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <Outlet />
+      <div className="flex-grow"><Outlet/></div>
       <Footer />
     </div>
   )

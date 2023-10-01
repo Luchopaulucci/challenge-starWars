@@ -1,49 +1,28 @@
+import { Button } from "@nextui-org/react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
-    return (
-      <section
-        className="relative bg-[url(https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)] bg-cover bg-center bg-no-repeat"
-      >
-        <div
-          className="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
-        ></div>
-
-        <div
-          className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
-        >
-          <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-            <h1 className="text-3xl font-extrabold sm:text-5xl">
-              Let us find your
-
-              <strong className="block font-extrabold text-rose-700">
-                Forever Home.
-              </strong>
-            </h1>
-
-            <p className="mt-4 max-w-lg sm:text-xl/relaxed">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo
-              tenetur fuga ducimus numquam ea!
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-4 text-center">
-              <a
-                href="#"
-                className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
-              >
-                Get Started
-              </a>
-
-              <a
-                href="#"
-                className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
+  return (
+    <div className="flex flex-col min-h-full sm:min-h-screen max-w-full">
+      <section className="relative overflow-hidden flex-grow">
+        <div className="relative z-20 mx-auto max-w-screen-sm flex flex-col justify-center items-center h-full text-center text-white">
+          <h1 className="text-4xl sm:text-8xl mt-24 mb-2">STAR WARS</h1>
+          <p className="text-lg sm:text-4xl font-semibold mb-4">
+            Find your favorite character
+          </p>
+          <Button color="secondary" variant="shadow" className="font-semibold">
+            <Link to="characters">✨Find them✨</Link>
+          </Button>
         </div>
       </section>
-    )
-  }
+      <video muted autoPlay loop className="fixed top-0 left-0 w-full h-full object-cover z-0">
+        <source src="/public/videos/bg-home.mp4" type="video/mp4" />
+      </video>
+      <div className="bg-black opacity-50 mix-blend-overlay absolute top-0 left-0 w-full h-full object-cover z-10"></div>
+    </div>
+  );
+};
 
-  export default Index
+export default Index;
+
+
