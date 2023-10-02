@@ -44,7 +44,7 @@ const Characters = () => {
 
   return (
     <div className="my-10 flex justify-center items-center flex-col min-h-full sm:min-h-screen min-w-full">
-      <div className="w-72">
+      <div className="w-48 md:w-72">
         <Input
           size="md"
           type="character"
@@ -52,28 +52,20 @@ const Characters = () => {
           placeholder="Enter the character to find"
         />
       </div>
-      <div className="flex flex-wrap flex-row justify-evenly gap-4 mt-20 md:w-3/4 lg:w-2/4">
+      <div className="flex flex-wrap flex-row justify-evenly gap-4 mt-20 lg:w-3/4">
         {loading ? generateSkeletons(10) : characters.map((character, index) => (
           <Cards
             key={character.url}
-            name={character.name}
-            gender={character.gender}
+            title={character.name}
+            subtitle={character.gender}
             url={character.url}
           />
         ))}
       </div>
       <div className="mt-20">
-        <Pagination
-          total={9}
-          onChange={handlePageChange}
-          initialPage={page}
-          showControls
-        >
+        <Pagination total={9} onChange={handlePageChange} initialPage={page} showControls>
           {(currentPage, isActive) => (
-            <PaginationItem
-              key={currentPage}
-              active={isActive}
-            >
+            <PaginationItem key={currentPage} active={isActive}>
               {currentPage}
             </PaginationItem>
           )}

@@ -1,0 +1,23 @@
+[33mcommit 2bae5f60ccbc20edd81d090fd893551e6acb4d12[m[33m ([m[1;36mHEAD -> [m[1;32mdevelopment[m[33m, [m[1;33mtag: v0.2.1[m[33m, [m[1;31morigin/development[m[33m)[m
+Author: Luchopaulucci <luchopaluch@gmail.com>
+Date:   Sun Oct 1 01:32:38 2023 -0300
+
+    :sparkles:Se agregan cards dinamicas en characters y paginacion
+
+[33mcommit ef23ae707a8f62119a51444e982bc67349ffcdfa[m
+Author: Luchopaulucci <luchopaluch@gmail.com>
+Date:   Sat Sep 30 23:35:49 2023 -0300
+
+    :art:Se agrega pantalla de home
+
+[33mcommit cf0cb204f13bf23305edf1e4cc0d3bd1bfa6c718[m[33m ([m[1;33mtag: v0.2.0[m[33m)[m
+Author: Luchopaulucci <luchopaluch@gmail.com>
+Date:   Sat Sep 30 16:26:28 2023 -0300
+
+    agregando tags
+
+[33mcommit cefeecf1cfa507627682b9c07990afe80f8f1f01[m[33m ([m[1;33mtag: v0.1.0[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Luchopaulucci <luchopaluch@gmail.com>
+Date:   Sat Sep 30 16:17:41 2023 -0300
+
+    first commit
