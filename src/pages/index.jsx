@@ -2,8 +2,9 @@ import { Button } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
+
   return (
-    <div className="flex flex-col min-h-full sm:min-h-screen max-w-full">
+    <div className="flex flex-col min-h-screen sm:min-h-screen max-w-full">
       <section className="relative overflow-hidden flex-grow">
         <div className="relative z-20 mx-auto max-w-screen-sm flex flex-col justify-center items-center h-full text-center text-white">
           <h1 className="text-4xl sm:text-8xl mt-24 mb-2">STAR WARS</h1>

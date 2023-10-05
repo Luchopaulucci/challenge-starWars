@@ -2,7 +2,7 @@ import {Card, CardHeader, CardFooter, Image, Button} from "@nextui-org/react";
 import { Link } from "react-router-dom";
 
 
-const Cards = ({title, subtitle, url}) => {
+const Cards = ({title, subtitle}) => {
   return (
     <Card isFooterBlurred className="w-72 h-80 col-span-12 sm:col-span-7">
     <CardHeader className="absolute z-10 top-1 flex-col items-start">
@@ -11,12 +11,11 @@ const Cards = ({title, subtitle, url}) => {
     </CardHeader>
     <Image
       removeWrapper
-      alt="Relaxing app background"
       className="z-0 w-full h-full object-cover"
       src="/public/images/luke.jpg"
     />
     <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-900 dark:border-default-100">
-      <Link radius="full" size="sm" className="text-white" to={"/characterInfo/" + url}>Get more info</Link>
+      <Link radius="full" size="sm" className="text-white" to={"/characterInfo/" + title}>Get more info</Link>
     </CardFooter>
   </Card>
   )

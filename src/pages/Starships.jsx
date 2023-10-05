@@ -50,7 +50,6 @@ const Starships = () => {
             key={starship.url}
             title={starship.name}
             subtitle={starship.starship_class}
-            url={starship.url}
           />
         ))}
       </div>

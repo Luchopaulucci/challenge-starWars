@@ -1,5 +1,5 @@
 
-function Footer() {
+function Footer({ fondo }) {
   return (
     <footer className=" w-screen sm:max-w-full bg-black absolute top-0 sm:relative">
       <div className="px-16 pt-8 pb-8 flex items-center justify-between">

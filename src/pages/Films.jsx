@@ -42,7 +42,6 @@ const Films = () => {
             key={film.url}
             title={film.title}
             subtitle={film.episode_id}
-            url={film.url}
           />
         ))}
       </div>

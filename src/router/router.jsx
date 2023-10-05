@@ -26,6 +26,10 @@ const router = createBrowserRouter([
         path: '/starships',
         element: <Starships />
       },
+      {
+        path: '/characterinfo/:name',
+        element: <Starships />
+      },
     ]
   },
 ])

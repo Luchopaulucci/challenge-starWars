@@ -1,12 +1,14 @@
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar} from "@nextui-org/react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar } from "@nextui-org/react";
 import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
     <Navbar className="bg-black p-0">
+
       <NavbarBrand>
         <Link className="font-bold text-inherit text-white text-3xl" to="/">Star Wars</Link>
       </NavbarBrand>
+
       <NavbarContent className="hidden sm:flex" justify="center">
         <NavbarItem>
           <Link to="films" className='text-white'>
@@ -14,7 +16,7 @@ const Header = () => {
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link to="characters" aria-current="page" className='text-red-500'>
+          <Link to="characters" className='text-red-500'>
             Characters
           </Link>
         </NavbarItem>
@@ -37,10 +39,26 @@ const Header = () => {
             />
           </DropdownTrigger>
           <DropdownMenu aria-label="Profile Actions" variant="flat">
-            <DropdownItem key="settings">UPCOMING SOON</DropdownItem>
+            <DropdownItem key="upcoming" className="hidden sm:block">Upcoming Soon 😢</DropdownItem>
+            <DropdownItem key="films" className="w-full block sm:hidden">
+              <Link to="films" className="w-full block">
+                Films
+              </Link>
+            </DropdownItem>
+            <DropdownItem key="characters" className="w-full block sm:hidden">
+              <Link to="characters" className="w-full block">
+                Characters
+              </Link>
+            </DropdownItem>
+            <DropdownItem key="starships" className="w-full block sm:hidden">
+              <Link to="starships" className="w-full block">
+                Starships
+              </Link>
+            </DropdownItem>
           </DropdownMenu>
         </Dropdown>
       </NavbarContent>
+
     </Navbar>
   )
 }
