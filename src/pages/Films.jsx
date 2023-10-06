@@ -22,8 +22,6 @@ const Films = () => {
       });
   }, []);
 
-  console.log(films);
-
   const generateSkeletons = (count) => {
     for (let i = 0; i < count; i++) {
       skeletons.push(
@@ -34,6 +32,7 @@ const Films = () => {
     }
     return skeletons;
   };
+
   return (
     <div className="my-10 flex justify-center items-center flex-col min-h-full sm:min-h-screen min-w-full">
       <div className="flex flex-wrap flex-row justify-evenly gap-4 mt-20 w-4/4">

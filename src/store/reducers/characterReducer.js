@@ -1,9 +1,9 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { filter_characters, get_AllCharacters, get_characters } from "../actions/characterAction";
+import { filter_characters, get_characters } from "../actions/characterAction";
 
 const initialState = {
     characters: [],
-    AllCharacters: [],
+    characters_list: [],
 }
 
 const characterReducer = createReducer(initialState,
@@ -14,16 +14,11 @@ const characterReducer = createReducer(initialState,
                 characters: action.payload.characters
             }
         })
-        .addCase(get_AllCharacters.fulfilled, (state, action) =>{
-            return {
-                ...state,
-                AllCharacters: action.payload.AllCharacters
-            }
-        })
         .addCase(filter_characters.fulfilled, (state, action) => {
             return {
                 ...state,
                 characters: action.payload.characters,
+                characters_list: [...state.characters_list, ...action.payload.characters_list],
             }
         })
     )
