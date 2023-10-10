@@ -7,8 +7,6 @@ const InfoFilm = () => {
   const films = useSelector((state) => state.filmReducer.films);
 
   const film = films.find((film) => film.title === title);
-  console.log(title);
-  console.log(films);
 
   if (!film) {
     return <div className="h-full bg-pages-Image text-4xl text-center">Film not found.</div>;

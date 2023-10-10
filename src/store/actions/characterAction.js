@@ -8,10 +8,8 @@ export const get_characters = createAsyncThunk('get_characters', async (obj) => 
         const response = await axios.get(`https://swapi.dev/api/people/?page=${obj}`)
 
         const charactersWithImages = response.data.results.map(character => {
-            const characterInfo = charactersData.characters.find(char => char.name === character.name);
-
-            // Usar una imagen predeterminada si no se encuentra la imagen del personaje
-            const image = characterInfo ? characterInfo.image : '/public/images/logo-default.jpeg';
+            const characterFind = charactersData.characters.find(char => char.name === character.name);
+            const image = characterFind ? characterFind.image : '/public/images/logo-default.jpeg';
 
             return {
                 ...character,
@@ -23,15 +21,14 @@ export const get_characters = createAsyncThunk('get_characters', async (obj) => 
             characters: charactersWithImages
         }
     } catch (error) {
-        console.log(error);
+        throw error;
     }
 })
 
 
 export const filter_characters = createAsyncThunk('filter_characters', async (inputValue) => {
     try {
-        const encodedObj = encodeURIComponent(inputValue);
-        const response = await axios.get(`https://swapi.dev/api/people/?search=${encodedObj}&format=json`);
+        const response = await axios.get(`https://swapi.dev/api/people/?search=${inputValue}&format=json`);
 
         if (response.data.results.length === 0) {
             Swal.fire({
@@ -45,11 +42,10 @@ export const filter_characters = createAsyncThunk('filter_characters', async (in
                 `
               })
         }
-        const charactersWithImages = response.data.results.map(character => {
-            const characterInfo = charactersData.characters.find(char => char.name === character.name);
 
-            // Usar una imagen predeterminada si no se encuentra la imagen del personaje
-            const image = characterInfo ? characterInfo.image : '/public/images/logo-default.jpeg';
+        const charactersWithImages = response.data.results.map(character => {
+            const characterFind = charactersData.characters.find(char => char.name === character.name);
+            const image = characterFind ? characterFind.image : '/public/images/logo-default.jpeg';
 
             return {
                 ...character,
@@ -62,7 +58,6 @@ export const filter_characters = createAsyncThunk('filter_characters', async (in
             characters_list: charactersWithImages
         }
     } catch (error) {
-        console.error(error);
         throw error;
     }
 });

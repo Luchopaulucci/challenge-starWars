@@ -14,7 +14,6 @@ const Starships = () => {
     setLoading(true);
   };
 
-  const starships = useSelector((state) => state.starshipReducer.starships)
   useEffect(() => {
     dispatch(get_starships(page)).then(() => {
       setLoading(false);
@@ -33,6 +32,8 @@ const Starships = () => {
     }
     return skeletons;
   };
+
+  const starships = useSelector((state) => state.starshipReducer.starships)
 
   return (
     <div className="bg-pages-Image min-h-full sm:min-h-screen min-w-full">

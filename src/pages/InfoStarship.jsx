@@ -35,8 +35,8 @@ const InfoStarship = () => {
             <h2 className="text-white text-xl"><span className="text-red-500">Model: </span>{starship.model}</h2>
             <h2 className="text-white text-xl"><span className="text-red-500">Starship class: </span>{starship.starship_class }</h2>
             <h2 className="text-white text-xl"><span className="text-red-500">Manufacturer: </span>{starship.manufacturer }</h2>
-            <h2 className="text-white text-xl"><span className="text-red-500">Cost: </span>{starship.cost_in_credits }</h2>
-            <h2 className="text-white text-xl"><span className="text-red-500">Length : </span>{starship.length }kg</h2>
+            <h2 className="text-white text-xl"><span className="text-red-500">Cost: </span>${starship.cost_in_credits }</h2>
+            <h2 className="text-white text-xl"><span className="text-red-500">Length: </span>{starship.length }kg</h2>
             <h2 className="text-white text-xl"><span className="text-red-500">Skin color: </span>{starship.crew }</h2>
             <h2 className="text-white text-xl"><span className="text-red-500">Passengers: </span>{starship.passengers }</h2>
             <h2 className="text-white text-xl"><span className="text-red-500">Max atmosphering speed: </span>{starship.max_atmosphering_speed }</h2>

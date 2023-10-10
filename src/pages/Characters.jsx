@@ -5,31 +5,22 @@ import { get_characters } from "../store/actions/characterAction";
 import Cards from "../components/Cards";
 
 const Characters = () => {
-  //Dispatch para usar redux
   const dispatch = useDispatch();
 
-  //Para setear la pagina actual en la que me encuentro y esta misma se la paso a la api
   const [page, setCurrentPage] = useState(1);
-  //Manejo de el cambio de paginas
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
     setLoading(true);
   };
 
-  //Traigo la pagina de characters que tengo en el store que me trajo el get_characters al hacer la peticion de la pagina actual
-  const store = useSelector((state) => state.characterReducer.characters);
-  //Mando a buscar la pagina
   useEffect(() => {
     dispatch(get_characters(page)).then(() => {
       setLoading(false);
     });
   }, [page]);
 
-  //El estado de loading le indica a los skeletons cuando se muestran y cuando se dejan de mostrar
   const [loading, setLoading] = useState(true);
-  //inicializo un array vacio para meter los skeletons que luego voy a mostrar cuando el loading sea true
   const skeletons = [];
-  //Genero los skeletons y los guardo en el array vacio de arriba
   const generateSkeletons = (count) => {
     for (let i = 0; i < count; i++) {
       skeletons.push(
@@ -40,6 +31,8 @@ const Characters = () => {
     }
     return skeletons;
   };
+
+  const store = useSelector((state) => state.characterReducer.characters);
 
   return (
     <div className="bg-pages-Image min-h-full sm:min-h-screen min-w-full">

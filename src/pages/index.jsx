@@ -9,7 +9,6 @@ import { Input, Checkbox } from "@nextui-org/react";
 const Index = () => {
   //Dispatch para usar redux
   const dispatch = useDispatch();
-
   //captura el valor del input
   const inputSearch = useRef();
 
@@ -26,6 +25,7 @@ const Index = () => {
   const listFiltered = list.filter((character, index, self) =>
     index === self.findIndex((c) => c.name === character.name)
   );
+
   //Saco los generos de los peronajes
   const genders = list.map((character) => character.gender);
   //Filtro la lista de egneros repetidos y dejo solo uno de cada uno
@@ -33,7 +33,7 @@ const Index = () => {
     index === self.findIndex((g) => g === gender)
   );
 
-  // Estado para los géneros seleccionados
+  // Estado para los géneros seleccionados en los checkbox
   const [selectedGenders, setSelectedGenders] = useState([]);
   //Mira cuando cambia de valor el handleCheckboxChange
   const handleCheckboxChange = (gender) => {

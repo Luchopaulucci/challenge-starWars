@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 
 const Cards = ({title, subtitle, toinfo, image}) => {
-  //Le saco los espacios en blanco al nombre del personaje
-  const routeName = title ? title.trim() : "";
 
   return (
     <Card isFooterBlurred className="w-72 h-80 col-span-12 sm:col-span-7">
@@ -18,7 +16,7 @@ const Cards = ({title, subtitle, toinfo, image}) => {
       src={image}
     />
     <CardFooter className="absolute bg-black/40 bottom-0 z-30 border-t-1 border-default-900 dark:border-default-100">
-      <Link radius="full" size="sm" className="text-red-500" to={`${toinfo}/${routeName}`}>Get more info</Link>
+      <Link radius="full" size="sm" className="text-red-500" to={`${toinfo}/${title}`}>Get more info</Link>
     </CardFooter>
   </Card>
   )

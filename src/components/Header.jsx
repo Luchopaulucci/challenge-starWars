@@ -4,11 +4,9 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <Navbar className="bg-black p-0">
-
       <NavbarBrand>
         <Link className="font-bold text-inherit text-white text-3xl" to="/">Star Wars</Link>
       </NavbarBrand>
-
       <NavbarContent className="hidden sm:flex" justify="center">
         <NavbarItem>
           <Link to="films" className='text-white'>
@@ -26,7 +24,6 @@ const Header = () => {
           </Link>
         </NavbarItem>
       </NavbarContent>
-
       <NavbarContent as="div" justify="end">
         <Dropdown placement="bottom-end">
           <DropdownTrigger>
@@ -40,17 +37,17 @@ const Header = () => {
           </DropdownTrigger>
           <DropdownMenu aria-label="Profile Actions" variant="flat">
             <DropdownItem key="upcoming" className="hidden sm:block">Upcoming Soon 😢</DropdownItem>
-            <DropdownItem key="films" className="w-full block sm:hidden">
+            <DropdownItem aria-label="Link to films" key="films" className="w-full block sm:hidden">
               <Link to="films" className="w-full block">
                 Films
               </Link>
             </DropdownItem>
-            <DropdownItem key="characters" className="w-full block sm:hidden">
+            <DropdownItem aria-label="Link to characters" key="characters" className="w-full block sm:hidden">
               <Link to="characters" className="w-full block">
                 Characters
               </Link>
             </DropdownItem>
-            <DropdownItem key="starships" className="w-full block sm:hidden">
+            <DropdownItem aria-label="Link to starships" key="starships" className="w-full block sm:hidden">
               <Link to="starships" className="w-full block">
                 Starships
               </Link>
@@ -58,7 +55,6 @@ const Header = () => {
           </DropdownMenu>
         </Dropdown>
       </NavbarContent>
-
     </Navbar>
   )
 }
