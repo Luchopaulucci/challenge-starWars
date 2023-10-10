@@ -1,0 +1,332 @@
+{
+  "characters": [
+    {
+      "name": "Luke Skywalker",
+      "image": "https://i.ibb.co/4WQzsRX/1.jpg"
+    },
+    {
+      "name": "C-3PO",
+      "image": "https://i.ibb.co/gRjM9qZ/2.jpg"
+    },
+    {
+      "name": "R2-D2",
+      "image": "https://i.ibb.co/Jr9Cp0z/3.jpg"
+    },
+    {
+      "name": "Darth Vader",
+      "image": "https://i.ibb.co/ZM962gs/4.jpg"
+    },
+    {
+      "name": "Leia Organa",
+      "image": "https://i.ibb.co/bRqDngn/5.jpg"
+    },
+    {
+      "name": "Owen Lars",
+      "image": "https://i.ibb.co/r0nfJ12/6.jpg"
+    },
+    {
+      "name": "Beru Whitesun lars",
+      "image": "https://i.ibb.co/5sMhgbk/7.jpg"
+    },
+    {
+      "name": "R5-D4",
+      "image": "https://i.ibb.co/vX6STTn/8.jpg"
+    },
+    {
+      "name": "Biggs Darklighter",
+      "image": "https://i.ibb.co/nQWKSLJ/9.jpg"
+    },
+    {
+      "name": "Obi-Wan Kenobi",
+      "image": "https://i.ibb.co/XYdt1LL/10.jpg"
+    },
+    {
+      "name": "Anakin Skywalker",
+      "image": "https://i.ibb.co/hcT0R8f/11.jpg"
+    },
+    {
+      "name": "Wilhuff Tarkin",
+      "image": "https://i.ibb.co/LPLPdZX/12.jpg"
+    },
+    {
+      "name": "Chewbacca",
+      "image": "https://i.ibb.co/VWjL535/13.jpg"
+    },
+    {
+      "name": "Han Solo",
+      "image": "https://i.ibb.co/yyC2jTt/14.jpg"
+    },
+    {
+      "name": "Greedo",
+      "image": "https://i.ibb.co/D1XcR9b/15.jpg"
+    },
+    {
+      "name": "Jabba Desilijic Tiure",
+      "image": "https://i.ibb.co/JsgqwfG/16.jpg"
+    },
+    {
+      "name": "Wedge Antilles",
+      "image": "https://i.ibb.co/ZG7SYWL/17.jpg"
+    },
+    {
+      "name": "Jek Tono Porkins",
+      "image": "https://i.ibb.co/WDzDCdY/18.jpg"
+    },
+    {
+      "name": "Yoda",
+      "image": "https://i.ibb.co/ZBSkD5B/19.jpg"
+    },
+    {
+      "name": "Palpatine",
+      "image": "https://i.ibb.co/RbGCZk3/20.jpg"
+    },
+    {
+      "name": "Boba Fett",
+      "image": "https://i.ibb.co/mTykW8p/21.jpg"
+    },
+    {
+      "name": "IG-88",
+      "image": "https://i.ibb.co/T8zSFK7/22.jpg"
+    },
+    {
+      "name": "Bossk",
+      "image": "https://i.ibb.co/wwssd82/23.jpg"
+    },
+    {
+      "name": "Lando Calrissian",
+      "image": "https://i.ibb.co/CMkbWMj/24.jpg"
+    },
+    {
+      "name": "Lobot",
+      "image": "https://i.ibb.co/TmCjX03/25.jpg"
+    },
+    {
+      "name": "Ackbar",
+      "image": "https://i.ibb.co/7QDvZ2r/26.jpg"
+    },
+    {
+      "name": "Mon Mothma",
+      "image": "https://i.ibb.co/bRPr1v3/27.jpg"
+    },
+    {
+      "name": "Arvel Crynyd",
+      "image": "https://i.ibb.co/JmtcS9d/28.jpg"
+    },
+    {
+      "name": "Wicket Systri Warrick",
+      "image": "https://i.ibb.co/yP2CsF1/29.jpg"
+    },
+    {
+      "name": "Nien Nunb",
+      "image": "https://i.ibb.co/XJpF2vb/30.jpg"
+    },
+    {
+      "name": "Qui-Gon Jinn",
+      "image": "https://i.ibb.co/dBkxQj9/31.jpg"
+    },
+    {
+      "name": "Nute Gunray",
+      "image": "https://i.ibb.co/1vH3mSW/32.jpg"
+    },
+    {
+      "name": "Finis Valorum",
+      "image": "https://i.ibb.co/F8SPKft/33.jpg"
+    },
+    {
+      "name": "Padmé Amidala",
+      "image": "https://i.ibb.co/L1N8Nd2/34.jpg"
+    },
+    {
+      "name": "Jar Jar Binks",
+      "image": "https://i.ibb.co/B4L2jXz/35.jpg"
+    },
+    {
+      "name": "Roos Tarpals",
+      "image": "https://i.ibb.co/jLXCr96/36.jpg"
+    },
+    {
+      "name": "Rugor Nass",
+      "image": "https://i.ibb.co/gzZXwtb/37.jpg"
+    },
+    {
+      "name": "Ric Olié",
+      "image": "https://i.ibb.co/jG6qV8C/38.jpg"
+    },
+    {
+      "name": "Watto",
+      "image": "https://i.ibb.co/FJ7BkbX/39.jpg"
+    },
+    {
+      "name": "Sebulba",
+      "image": "https://i.ibb.co/7N3hC2n/40.jpg"
+    },
+    {
+      "name": "Quarsh Panaka",
+      "image": "https://i.ibb.co/b17M93X/41.jpg"
+    },
+    {
+      "name": "Shmi Skywalker",
+      "image": "https://i.ibb.co/KN8LNqz/42.jpg"
+    },
+    {
+      "name": "Darth Maul",
+      "image": "https://i.ibb.co/sWW7YY0/43.jpg"
+    },
+    {
+      "name": "Bib Fortuna",
+      "image": "https://i.ibb.co/D52xH29/44.jpg"
+    },
+    {
+      "name": "Ayla Secura",
+      "image": "https://i.ibb.co/hBFm2Dr/45.jpg"
+    },
+    {
+      "name": "Ratts Tyerel",
+      "image": "https://i.ibb.co/XCp04TY/46.jpg"
+    },
+    {
+      "name": "Dud Bolt",
+      "image": "https://i.ibb.co/HPK2gCT/47.jpg"
+    },
+    {
+      "name": "Gasgano",
+      "image": "https://i.ibb.co/cvxGX3S/48.jpg"
+    },
+    {
+      "name": "Ben Quadinaros",
+      "image": "https://i.ibb.co/9tz3Tg7/49.jpg"
+    },
+    {
+      "name": "Mace Windu",
+      "image": "https://i.ibb.co/m4HT4dg/50.jpg"
+    },
+    {
+      "name": "Ki-Adi-Mundi",
+      "image": "https://i.ibb.co/KDnzbGg/51.jpg"
+    },
+    {
+      "name": "Kit Fisto",
+      "image": "https://i.ibb.co/5kCRnJf/52.jpg"
+    },
+    {
+      "name": "Eeth Koth",
+      "image": "https://i.ibb.co/SRL2MJ4/descarga.jpg"
+    },
+    {
+      "name": "Adi Gallia",
+      "image": "https://i.ibb.co/84pvTL2/53.jpg"
+    },
+    {
+      "name": "Saesee Tiin",
+      "image": "https://i.ibb.co/wyYpRTX/54.jpg"
+    },
+    {
+      "name": "Yarael Poof",
+      "image": "https://i.ibb.co/7CwhRv2/55.jpg"
+    },
+    {
+      "name": "Plo Koon",
+      "image": "https://i.ibb.co/2sh4Jfy/56.jpg"
+    },
+    {
+      "name": "Mas Amedda",
+      "image": "https://i.ibb.co/tpx92zf/57.jpg"
+    },
+    {
+      "name": "Gregar Typho",
+      "image": "https://i.ibb.co/18Nbh7x/58.jpg"
+    },
+    {
+      "name": "Cordé",
+      "image": "https://i.ibb.co/rx2g2Md/59.jpg"
+    },
+    {
+      "name": "Cliegg Lars",
+      "image": "https://i.ibb.co/w4JJrzf/60.jpg"
+    },
+    {
+      "name": "Poggle the Lesser",
+      "image": "https://i.ibb.co/tMTcKhh/61.jpg"
+    },
+    {
+      "name": "Luminara Unduli",
+      "image": "https://i.ibb.co/Wky1M6N/62.jpg"
+    },
+    {
+      "name": "Barriss Offee",
+      "image": "https://i.ibb.co/s1P7SWN/63.jpg"
+    },
+    {
+      "name": "Dormé",
+      "image": "https://i.ibb.co/ngJr4Gq/64.jpg"
+    },
+    {
+      "name": "Dooku",
+      "image": "https://i.ibb.co/nbqX9Q7/65.jpg"
+    },
+    {
+      "name": "Bail Prestor Organa",
+      "image": "https://i.ibb.co/0h0PVhT/66.jpg"
+    },
+    {
+      "name": "Jango Fett",
+      "image": "https://i.ibb.co/2yphsJX/67.jpg"
+    },
+    {
+      "name": "Zam Wesell",
+      "image": "https://i.ibb.co/rfX174d/68.jpg"
+    },
+    {
+      "name": "Dexter Jettster",
+      "image": "https://i.ibb.co/Lxf9s2x/69.jpg"
+    },
+    {
+      "name": "Lama Su",
+      "image": "https://i.ibb.co/NxVGKyr/70.jpg"
+    },
+    {
+      "name": "Taun We",
+      "image": "https://i.ibb.co/C2S7L8c/descarga-1.jpg"
+    },
+    {
+      "name": "Jocasta Nu",
+      "image": "https://i.ibb.co/RQWCtYN/71.jpg"
+    },
+    {
+      "name": "R4-P17",
+      "image": "https://i.ibb.co/0yQ537N/72.jpg"
+    },
+    {
+      "name": "Wat Tambor",
+      "image": "https://i.ibb.co/zJJ6kFw/73.jpg"
+    },
+    {
+      "name": "San Hill",
+      "image": "https://i.ibb.co/0rCh93V/74.jpg"
+    },
+    {
+      "name": "Shaak Ti",
+      "image": "https://i.ibb.co/cCZP9bp/75.jpg"
+    },
+    {
+      "name": "Grievous",
+      "image": "https://i.ibb.co/SmYvDQ7/76.jpg"
+    },
+    {
+      "name": "Tarfful",
+      "image": "https://i.ibb.co/5R9GY2f/77.jpg"
+    },
+    {
+      "name": "Raymus Antilles",
+      "image": "https://i.ibb.co/XSHdW4b/78.jpg"
+    },
+    {
+      "name": "Sly Moore",
+      "image": "https://i.ibb.co/2Wdb5rt/79.jpg"
+    },
+    {
+      "name": "Tion Medon",
+      "image": "https://i.ibb.co/Tc18hRD/80.jpg"
+    }
+  ]
+}

@@ -1,36 +1,28 @@
 import React, { useEffect, useState } from "react";
 import Cards from "../components/Cards";
-import { Input, Skeleton, Card, Pagination, PaginationItem, PaginationCursor } from "@nextui-org/react";
-import axios from "axios";
+import { Skeleton, Card, Pagination, PaginationItem, PaginationCursor } from "@nextui-org/react";
+import { useDispatch, useSelector } from "react-redux";
+import { get_starships } from "../store/actions/starshipAction";
+
 
 const Starships = () => {
-  const [starships, setStarships] = useState([]);
+  const dispatch = useDispatch();
+
   const [page, setCurrentPage] = useState(1);
-  const [loading, setLoading] = useState(true);
-  const skeletons = [];
-
-  useEffect(() => {
-    fetchStarships(page);
-  }, [page]);
-
-  const fetchStarships = (pageNumber) => {
-    setLoading(true);
-    axios
-      .get(`https://swapi.dev/api/starships/?page=${pageNumber}`)
-      .then((response) => {
-        setStarships(response.data.results);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setLoading(false);
-      });
-  };
-
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
+    setLoading(true);
   };
 
+  const starships = useSelector((state) => state.starshipReducer.starships)
+  useEffect(() => {
+    dispatch(get_starships(page)).then(() => {
+      setLoading(false);
+    });
+  }, [page]);
+
+  const [loading, setLoading] = useState(true);
+  const skeletons = [];
   const generateSkeletons = (count) => {
     for (let i = 0; i < count; i++) {
       skeletons.push(
@@ -43,17 +35,20 @@ const Starships = () => {
   };
 
   return (
-    <div className="my-10 flex justify-center items-center flex-col min-h-full sm:min-h-screen min-w-full">
+    <div className="bg-pages-Image min-h-full sm:min-h-screen min-w-full">
+      <div className="w-full min-h-screen backdrop-blur-xs flex flex-col justify-center items-center">
       <div className="flex flex-wrap flex-row justify-evenly gap-4 mt-20 md:w-2/4 lg:w-3/4">
         {loading ? generateSkeletons(10) : starships.map((starship) => (
           <Cards
-            key={starship.url}
+            key={starship.name}
             title={starship.name}
             subtitle={starship.starship_class}
+            toinfo={"infostarship"}
+            image={starship.image}
           />
         ))}
       </div>
-      <div className="mt-20">
+      <div className="my-10">
         <Pagination total={4} onChange={handlePageChange} initialPage={page} showControls>
           {(currentPage, isActive) => (
             <PaginationItem key={currentPage} active={isActive}>
@@ -62,6 +57,7 @@ const Starships = () => {
           )}
           <PaginationCursor />
         </Pagination>
+      </div>
       </div>
     </div>
   )

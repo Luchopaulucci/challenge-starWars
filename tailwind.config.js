@@ -8,7 +8,15 @@ export const content = [
   "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
 ];
 export const theme = {
-  extend: {},
+  extend: {
+    backgroundImage: {
+      'error-Image': "url('/public/images/fondo-error.jpg')",
+      'pages-Image': "url('/public/images/fondo-pages.jpg')",
+    },
+    backdropBlur: {
+      xs: '1px',
+    }
+  },
 };
 export const darkMode = "class";
 export const plugins = [nextui()];

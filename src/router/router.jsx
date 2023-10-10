@@ -4,6 +4,9 @@ import Index from "../pages/index"
 import Characters from "../pages/Characters"
 import Films from "../pages/Films"
 import Starships from "../pages/Starships"
+import InfoCharacter from "../pages/InfoCharacter"
+import InfoFilm from "../pages/InfoFilm"
+import InfoStarchip from "../pages/InfoStarship"
 
 const router = createBrowserRouter([
   {
@@ -14,21 +17,36 @@ const router = createBrowserRouter([
         path: '/',
         element: <Index />
       },
+
       {
         path: '/characters',
-        element: <Characters />
+        element: <Characters />,
       },
       {
-        path: '/films',
-        element: <Films />
+        path: '/infocharacter/:name',
+        element: <InfoCharacter />
       },
+      {
+        path: 'characters/infocharacter/:name',
+        element: <InfoCharacter />
+      },
+
+      {
+        path: '/films/',
+        element: <Films />,
+      },
+      {
+        path: 'films/infofilm/:title',
+        element: <InfoFilm />
+      },
+
       {
         path: '/starships',
-        element: <Starships />
+        element: <Starships />,
       },
       {
-        path: '/characterinfo/:name',
-        element: <Starships />
+        path: 'starships/infostarship/:name',
+        element: <InfoStarchip />
       },
     ]
   },

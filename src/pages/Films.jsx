@@ -1,27 +1,21 @@
 import React, { useEffect, useState } from "react";
 import Cards from "../components/Cards";
-import { Input, Skeleton, Card, Pagination, PaginationItem, PaginationCursor } from "@nextui-org/react";
-import axios from "axios";
+import { Skeleton, Card } from "@nextui-org/react";
+import { useDispatch, useSelector } from "react-redux";
+import { get_films } from "../store/actions/filmAction";
 
 const Films = () => {
-  const [films, setFilms] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const skeletons = [];
+  const dispatch = useDispatch()
 
+  const films = useSelector((state) => state.filmReducer.films)
   useEffect(() => {
-    setLoading(true);
-    axios
-      .get("https://swapi.dev/api/films/")
-      .then((response) => {
-        setFilms(response.data.results);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setLoading(false);
-      });
+    dispatch(get_films()).then(() => {
+      setLoading(false);
+    });
   }, []);
 
+  const [loading, setLoading] = useState(true);
+  const skeletons = [];
   const generateSkeletons = (count) => {
     for (let i = 0; i < count; i++) {
       skeletons.push(
@@ -34,15 +28,19 @@ const Films = () => {
   };
 
   return (
-    <div className="my-10 flex justify-center items-center flex-col min-h-full sm:min-h-screen min-w-full">
-      <div className="flex flex-wrap flex-row justify-evenly gap-4 mt-20 w-4/4">
-        {loading ? generateSkeletons(6) : films.map((film) => (
-          <Cards
-            key={film.url}
-            title={film.title}
-            subtitle={film.episode_id}
-          />
-        ))}
+    <div className="bg-pages-Image min-h-full sm:min-h-screen min-w-full">
+      <div className="w-full min-h-screen backdrop-blur-xs flex flex-col justify-center items-center">
+        <div className="my-20 flex flex-wrap flex-row justify-evenly gap-4 w-3/4">
+          {loading ? generateSkeletons(6) : films.map((film) => (
+            <Cards
+              key={film.name}
+              title={film.title}
+              subtitle={film.episode_id}
+              toinfo={"infofilm"}
+              image={film.image}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )
