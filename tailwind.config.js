@@ -1,16 +1,22 @@
 
 // tailwind.config.js
-const {nextui} = require("@nextui-org/react");
+import { nextui } from "@nextui-org/react";
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    './src/**/*.{js,ts,jsx,tsx}',
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
+export const content = [
+  './src/**/*.{js,ts,jsx,tsx}',
+  "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+];
+export const theme = {
+  extend: {
+    backgroundImage: {
+      'error-Image': "url('/public/images/fondo-error.jpg')",
+      'pages-Image': "url('/public/images/fondo-pages.jpg')",
+    },
+    backdropBlur: {
+      xs: '1px',
+    }
   },
-  darkMode: "class",
-  plugins: [nextui()],
 };
+export const darkMode = "class";
+export const plugins = [nextui()];

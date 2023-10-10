@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* index.css o App.css */
+/* Establece el ancho de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px; /* Ajusta la altura para que sea redonda */
+  }
+  
+  /* Establece el color y el estilo de la barra de desplazamiento */
+  ::-webkit-scrollbar-thumb {
+    background-color: #830020; /* Color rojo brillante */
+    border-radius: 50px; /* Hace que la barra de desplazamiento sea redonda */
+  }
+  
+  /* Establece el color de la pista de la barra de desplazamiento */
+  ::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+  }
